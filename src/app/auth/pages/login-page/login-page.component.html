@@ -1,0 +1,16 @@
+<div class="card mt-4">
+  <div class="card-body">
+    <form [formGroup]="myForm" (ngSubmit)="login()">
+      <div class="mb-3">
+        <label for="InputName" class="form-label">Nombre</label>
+        <input formControlName="nameUser" class="form-control" id="InputName" aria-describedby="nameHelp">
+        <div id="nameHelp" class="form-text">Ingrese el nombre con que esta registrado.</div>
+      </div>
+      <div class="mb-3">
+        <label for="InputId" class="form-label">Password</label>
+        <input formControlName="idUser" class="form-control" id="InputId">
+      </div>
+      <button [disabled]="myForm.invalid" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
